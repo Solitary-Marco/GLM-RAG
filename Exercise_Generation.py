@@ -22,7 +22,7 @@ def generate_exercise(documents, long_text, uploaded_file_text):
     )
     
     prompt_template  = f"""
-        现在你是一款智能助教，你需要根据本地知识库 {content}和用户具体需求{long_text}生成练习题，你需要遵循以下原则：
+        现在你是一款智能助教，你需要根据本地知识库 {context}和用户具体需求{long_text}生成练习题，你需要遵循以下原则：
         1. 生成的练习题需要用阿拉伯数字标序。
         2. 选择题的选项设置要具有迷惑性，要尽可能的和正确答案贴近。
         3. 注意选择题的选项需要回车另起一行。
