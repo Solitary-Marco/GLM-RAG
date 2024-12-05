@@ -8,7 +8,10 @@ from typing import List
 
 def generate_exercise(documents, long_text, uploaded_file_text):
 
-    context = uploaded_file_text if uploaded_file_text is not None else documents
+    if uploaded_file_text:
+        context = uploaded_file_text
+    else:
+        context = documents
     
     # Setup LLMChain & prompts
     llm = ChatOpenAI(
