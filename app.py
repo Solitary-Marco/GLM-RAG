@@ -2,7 +2,6 @@ import streamlit as st
 from modules import *
 from langchain_community.embeddings import ZhipuAIEmbeddings 
 import os
-from langchain_chroma import Chroma
 from langchain_community.document_loaders import PyPDFLoader
 
 your_api_key = "2078514133ddc465825d01c04baa0317.7ePDJJs5sD2CGESo"
