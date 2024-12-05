@@ -6,7 +6,7 @@ from langchain_community.embeddings import ZhipuAIEmbeddings
 from langchain_community.vectorstores import FAISS
 from typing import List
 
-def generate_exercise(documents, long_text, uploaded_file_text=None):
+def generate_exercise(documents, long_text, uploaded_file_text):
 
 
     if uploaded_file_text is not None：
