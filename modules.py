@@ -8,7 +8,7 @@ from Exercise_Generation import generate_exercise
 
 def show_qa_module(documents):
     st.header("知识问答(Q&A)")
-    message = st.text_area("请输入您要咨询的问题：", height=50)
+    message = st.text_area("请输入您要咨询的问题：", height=68)
 
     if st.button("发送 🡆"):
         if message:
@@ -21,7 +21,7 @@ def show_qa_module(documents):
 
 def show_practice_module(documents):
     st.header("练习题生成(Exercise generation)")
-    long_text = st.text_area("请输入您的具体需求：", height=50)
+    long_text = st.text_area("请输入您的具体需求：", height=68)
     uploaded_file = st.file_uploader("上传相关文件", type=["pdf", "docx", "txt"])
 
     uploaded_file_text = []
