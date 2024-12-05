@@ -30,7 +30,7 @@ def generate_exercise(documents, long_text, uploaded_file_text):
         4. 简答题应该是基于具体的知识片段总结而来。
 
         以下是本地知识库内容：
-        {content}
+        {context}
         ### 以下是用户的具体需求：
         {long_text}
 
