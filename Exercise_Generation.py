@@ -8,10 +8,7 @@ from typing import List
 
 def generate_exercise(documents, long_text, uploaded_file_text):
 
-    content = documents
-    if uploaded_file_text is not None：
-        content = uploaded_file_text
-    
+    context = uploaded_file_text if uploaded_file_text is not None else documents
     
     # Setup LLMChain & prompts
     llm = ChatOpenAI(
@@ -22,14 +19,14 @@ def generate_exercise(documents, long_text, uploaded_file_text):
     )
     
     prompt_template  = f"""
-        现在你是一款智能助教，你需要根据***本地知识库***和***用户具体需求***生成练习题，你需要遵循以下原则：
+        现在你是一款智能助教，你需要根据本地知识库 {content}和用户具体需求{long_text}生成练习题，你需要遵循以下原则：
         1. 生成的练习题需要用阿拉伯数字标序。
         2. 选择题的选项设置要具有迷惑性，要尽可能的和正确答案贴近。
         3. 注意选择题的选项需要回车另起一行。
         3. 填空题的空缺位置需要是具体的重要知识点，不能过于简单。
         4. 简答题应该是基于具体的知识片段总结而来。
 
-        ### 以下是本地知识库内容：
+        以下是本地知识库内容：
         {content}
         ### 以下是用户的具体需求：
         {long_text}
