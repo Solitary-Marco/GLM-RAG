@@ -47,7 +47,7 @@ def show_practice_module(documents):
         else:
             st.warning("请先输入您的需求！")
 
-def show_assignment_module(vector):
+def show_assignment_module(documents):
     st.header("作业批改(Homework correction)")
     
     uploaded_file = st.file_uploader("请上传作业：", type=["pdf", "docx", "txt"])
@@ -85,7 +85,7 @@ def show_assignment_module(vector):
     if st.button("发送 🡆"):
         if uploaded_file:
             st.write("作业正在批改中...")
-            result = generate_result(vector, exercise, reference_answer)
+            result = generate_result(documents, exercise, reference_answer)
             st.info(result)
         else:
             st.warning("请先上传相关文件！")
