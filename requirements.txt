@@ -5,3 +5,7 @@ pydantic==1.*
 langchain
 faiss-cpu
 tiktoken
+PyPDF2
+docx2txt
+langchain_community
+langchain_openai
