@@ -8,9 +8,9 @@ from typing import List
 
 def generate_exercise(documents, long_text, uploaded_file_text):
 
-
+    content = documents
     if uploaded_file_text is not None：
-        documents = uploaded_file_text
+        content = uploaded_file_text
     
     
     # Setup LLMChain & prompts
@@ -30,7 +30,7 @@ def generate_exercise(documents, long_text, uploaded_file_text):
         4. 简答题应该是基于具体的知识片段总结而来。
 
         ### 以下是本地知识库内容：
-        {documents}
+        {content}
         ### 以下是用户的具体需求：
         {long_text}
 
