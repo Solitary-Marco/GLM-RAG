@@ -12,7 +12,7 @@ embeddings = ZhipuAIEmbeddings(
 )
 
 # 加载文档
-loader = PyPDFLoader("./1. 中共二十大报告.pdf")
+loader = PyPDFLoader("./合并PDF1(1).pdf")
 documents = loader.load()
 
 # 创建/载入向量数据
