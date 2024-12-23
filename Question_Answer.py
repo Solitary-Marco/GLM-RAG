@@ -12,8 +12,8 @@ def generate_response(documents, message):
     embeddings = ZhipuAIEmbeddings(
         model="embedding-3",
     )
-    db = Chroma(collection_name="GLM_RAG", embedding_function=embeddings, persist_directory="knowledge_db/")
-    #db = FAISS.from_documents(documents, embeddings) 
+    # db = Chroma(collection_name="GLM_RAG", embedding_function=embeddings, persist_directory="knowledge_db/")
+    db = FAISS.from_documents(documents, embeddings) 
     # Function for similarity sGLM_RAGearch
     retriever = db.as_retriever(search_type="similarity", search_kwargs={"k": 3})
     
