@@ -17,7 +17,7 @@ def generate_exercise(documents, long_text, uploaded_file_text):
     llm = ChatOpenAI(
         temperature=0.95,
         model="glm-4",
-        openai_api_key="2078514133ddc465825d01c04baa0317.7ePDJJs5sD2CGESo",
+        openai_api_key="",
         openai_api_base="https://open.bigmodel.cn/api/paas/v4/"
     )
     
