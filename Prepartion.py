@@ -26,7 +26,7 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 
 
-your_api_key = "2078514133ddc465825d01c04baa0317.7ePDJJs5sD2CGESo"
+your_api_key = ""
 if not os.getenv("ZHIPUAI_API_KEY"):
     os.environ["ZHIPUAI_API_KEY"] = your_api_key
 
