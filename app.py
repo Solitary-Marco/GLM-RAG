@@ -4,7 +4,7 @@ from langchain_community.embeddings import ZhipuAIEmbeddings
 import os
 from langchain_community.document_loaders import PyPDFLoader
 
-your_api_key = "2078514133ddc465825d01c04baa0317.7ePDJJs5sD2CGESo"
+your_api_key = ""
 if not os.getenv("ZHIPUAI_API_KEY"):
     os.environ["ZHIPUAI_API_KEY"] = your_api_key
 embeddings = ZhipuAIEmbeddings(
